@@ -12,19 +12,22 @@ const { title, description, publishDate, author, heroImage, permalink, alt } = c
 	<head>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prism-themes@1.9.0/themes/prism-lucario.css"/>
 		<BaseHead {title} {description} {permalink} />
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+        </style>
 	</head>
 
-	<body class="font-dmsans bg-gray-dark text-white">
+	<body class="text-white font-dmsans bg-gray-dark">
 		<BlogHeader />
     
-		<main class="mt-20 px-4">
+		<main class="px-4 mt-20">
 			<BlogPost {title} {author} {heroImage} {publishDate} {alt}>
 				<slot />
 			</BlogPost>
 		</main>
 
-        <footer class="max-w-screen-md mx-auto py-12 text-white/50">
-            <hr class="border-t-2 mx-auto border-white/5 mb-24" />
+        <footer class="max-w-screen-md py-12 mx-auto text-white/50">
+            <hr class="mx-auto mb-24 border-t-2 border-white/5" />
             <p>Stay Connected with Me!</p>
             <p>Follow me on <a href="https://twitter.com/timuism" target="_new" class="text-white underline">Twitter</a></p>
         </footer>
