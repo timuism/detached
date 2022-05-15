@@ -1,0 +1,32 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import BlogHeader from '../components/BlogHeader.astro';
+import BlogPost from '../components/BlogPost.astro';
+
+
+const { content } = Astro.props;
+const { title, description, publishDate, author, heroImage, permalink, alt } = content;
+---
+
+<html lang={content.lang || 'en'}>
+	<head>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prism-themes@1.9.0/themes/prism-lucario.css"/>
+		<BaseHead {title} {description} {permalink} />
+	</head>
+
+	<body class="font-dmsans bg-gray-dark text-white">
+		<BlogHeader />
+    
+		<main class="mt-20 px-4">
+			<BlogPost {title} {author} {heroImage} {publishDate} {alt}>
+				<slot />
+			</BlogPost>
+		</main>
+
+        <footer class="max-w-screen-md mx-auto py-12 text-white/50">
+            <hr class="border-t-2 mx-auto border-white/5 mb-24" />
+            <p>Stay Connected with Me!</p>
+            <p>Follow me on <a href="https://twitter.com/timuism" target="_new" class="text-white underline">Twitter</a></p>
+        </footer>
+	</body>
+</html>

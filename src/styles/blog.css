@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.markup-p {
+    @apply text-lg;
+}
+
+.post-content > * + *, 
+.markup-p + .markup-p {
+    @apply pt-6;
+}
+
+.post-content p {
+    @apply leading-relaxed max-w-screen-md mx-auto;
+}
+
+pre.astro-code {
+    @apply rounded-md my-6 py-6 px-6 text-sm md:text-base;
+}
