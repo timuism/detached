@@ -29,7 +29,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 	<body class="font-dmsans bg-gray-dark text-white min-w-[320px]">
 		<BlogHeader />
         <main class="mt-20">
-            <section aria-label="Blog post list" class="space-y-12 px-4">
+            <section aria-label="Blog post list" class="px-4 space-y-12">
                 {allPosts.map((p) => <BlogPostPreview post={p} />)}
             </section>
         </main>

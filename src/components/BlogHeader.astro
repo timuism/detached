@@ -1,12 +1,17 @@
-<header class="max-w-screen-md flex flex-col md:flex-row justify-between items-center mx-auto text-left mt-2 md:mt-8 border-b-2 border-white/5 px-4 pb-4 md:pb-8">
+---
+import DetachedLogo from '/src/assets/DetachedLogo.svg'
+
+---
+
+<header class="flex flex-col items-center justify-between max-w-screen-md px-4 pb-4 mx-auto mt-2 text-left border-b-2 md:flex-row md:mt-8 border-white/5 md:pb-8">
 
     <a href="/">
-        <img src="/src/assets/DetachedLogo.svg" alt="" class="w-[250px]" />
+        <img src={DetachedLogo} alt="" class="w-[250px]" />
     </a>
 
     <h1 hidden>Detached</h1>
 
-    <h2 class="uppercase tracking-widest text-xs flex md:flex-col space-x-1 md:space-x-0 text-white text-center md:text-right">
+    <h2 class="flex space-x-1 text-xs tracking-widest text-center text-white uppercase md:flex-col md:space-x-0 md:text-right">
         <p>A web dev blog by</p>
         <a href="https://timuism.net" class="font-semibold hover:underline">Timuism</a>
     </h2>

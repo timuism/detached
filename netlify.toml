@@ -1,7 +1,6 @@
 [build]
   publish = "dist"
   command = "npm run build"
-  functions = "lambda"
 [build.environment]
   NODE_VERSION = "16"
   YARN_VERSION = "1.22.4"
